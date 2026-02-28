@@ -10,9 +10,14 @@ description = "Jupyter Env using Nix";
       # Adjust which Python packages you want available in Jupyter
       pythonPackages = ps: with ps; [
         ipykernel
-        jupyterlab # provides Jupyter Lab
+        jupyterlab
         matplotlib
         numpy
+        openpyxl
+        fastparquet
+        pandas
+        scikit-learn
+        tensorflow
       ];
       pythonEnv = pkgs.python3.withPackages pythonPackages;
     in {

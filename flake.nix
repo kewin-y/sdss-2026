@@ -16,8 +16,9 @@ description = "Jupyter Env using Nix";
         openpyxl
         fastparquet
         pandas
+        seaborn
         scikit-learn
-        tensorflow
+        plotly
       ];
       pythonEnv = pkgs.python3.withPackages pythonPackages;
     in {
